@@ -1,0 +1,51 @@
+import { Link } from "react-router-dom";
+
+const JobCard = ({ job }) => {
+  const {
+    _id,
+    job_title,
+    company_name,
+    location,
+    category,
+    deadline,
+    min_price,
+    max_price,
+  } = job || {};
+  return (
+    <Link to={`/job/${_id}`} className="relative bg-white border border-gray-200 rounded-2xl p-5 shadow-sm group transition-all duration-700 delay-100 hover:bg-[#655ced]">
+      {/* Top row: Deadline (left) and Category (right) */}
+      <div className="flex justify-between items-center mb-3">
+        <span className="text-sm text-gray-500 group-hover:text-white transition-all duration-300 ">
+          Deadline: {new Date(deadline).toLocaleDateString()}
+        </span>
+        <span className="text-xs font-medium bg-[#ecebfe] text-[#655ced] px-3 lg:px-1 py-1 rounded-full group-hover:bg-white group-hover:text-[#655ced] transition-all duration-300">
+          {category}
+        </span>
+      </div>
+
+      {/* Job Title */}
+      <h2 className="text-xl font-semibold text-[#655ced] group-hover:text-white mb-2 transition-all duration-300">
+        {job_title}
+      </h2>
+
+      {/* Company */}
+      <p className="text-gray-600 group-hover:text-white mb-1 transition-all duration-300">
+        <span className="font-medium">Company:</span> {company_name || "N/A"}
+      </p>
+
+      {/* Location */}
+      <p className="text-gray-600 group-hover:text-white mb-1 transition-all duration-300">
+        <span className="font-medium">Location:</span> {location || "Remote"}
+      </p>
+
+      {/* Range */}
+      <p className="text-gray-600 group-hover:text-white transition-all duration-300">
+        <span className="font-medium">Range:</span>{" "}
+        {min_price ? `$${min_price}` : "Negotiable"} -{" "}
+        {max_price ? `$${max_price}` : "Negotiable"}
+      </p>
+    </Link>
+  );
+};
+
+export default JobCard;
