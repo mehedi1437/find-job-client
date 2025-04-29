@@ -12,7 +12,7 @@ A modern and responsive job search application built with React.js and Tailwind 
 ---
 
 ## 📷 Screenshots
-![Homepage](https://i.ibb.co.com/VcL0XQqW/Screenshot-5.png)
+![Homepage](https://i.ibb.co.com/sp9mdQ0q/Screenshot-4.png)
 ![Job Listing](https://i.ibb.co.com/VcL0XQqW/Screenshot-5.png)
 
 ---
