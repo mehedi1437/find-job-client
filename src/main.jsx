@@ -14,7 +14,7 @@ createRoot(document.getElementById("root")).render(
     <div className="max-w-7xl mx-auto">
       <AuthProvider>
         <QueryClientProvider client={queryClient}>
-          <RouterProvider router={router}></RouterProvider>
+          <RouterProvider router={router} basename="/"></RouterProvider>
           <ReactQueryDevtools initialIsOpen={false} />
         </QueryClientProvider>
         <Toaster></Toaster>
