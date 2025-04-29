@@ -10,9 +10,13 @@ const JobCard = ({ job }) => {
     deadline,
     min_price,
     max_price,
+    bid_count,
   } = job || {};
   return (
-    <Link to={`/job/${_id}`} className="relative bg-white border border-gray-200 rounded-2xl p-5 shadow-sm group transition-all duration-700 delay-100 hover:bg-[#655ced]">
+    <Link
+      to={`/job/${_id}`}
+      className="relative bg-white border border-gray-200 rounded-2xl p-5 shadow-sm group transition-all duration-700 delay-100 hover:bg-[#655ced]"
+    >
       {/* Top row: Deadline (left) and Category (right) */}
       <div className="flex justify-between items-center mb-3">
         <span className="text-sm text-gray-500 group-hover:text-white transition-all duration-300 ">
@@ -34,8 +38,12 @@ const JobCard = ({ job }) => {
       </p>
 
       {/* description */}
-      <p title={description} className="text-gray-600 group-hover:text-white mb-1 transition-all duration-300">
-        <span className="font-medium">description:</span> {description.substring(0,10) }....
+      <p
+        title={description}
+        className="text-gray-600 group-hover:text-white mb-1 transition-all duration-300"
+      >
+        <span className="font-medium">description:</span>{" "}
+        {description.substring(0, 10)}....
       </p>
 
       {/* Range */}
@@ -43,6 +51,10 @@ const JobCard = ({ job }) => {
         <span className="font-medium">Range:</span>{" "}
         {min_price ? `$${min_price}` : "Negotiable"} -{" "}
         {max_price ? `$${max_price}` : "Negotiable"}
+      </p>
+      {/* Total bids */}
+      <p className="text-gray-600 mt-2 group-hover:text-white mb-1 transition-all duration-300">
+        <span className="font-medium">Total Bids:</span> {bid_count?bid_count:0}
       </p>
     </Link>
   );

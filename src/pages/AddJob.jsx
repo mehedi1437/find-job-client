@@ -1,4 +1,4 @@
-import {  useState } from "react";
+import { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useNavigate } from "react-router-dom";
@@ -8,7 +8,7 @@ import useAuth from "../hooks/useAuth";
 const AddJob = () => {
   const navigate = useNavigate();
   const [startDate, setStartDate] = useState(new Date());
-  const  {user} = useAuth();
+  const { user } = useAuth();
 
   const handleFormSubmision = async (event) => {
     event.preventDefault();
@@ -36,13 +36,15 @@ const AddJob = () => {
       },
       job_title,
       category,
+      bid_count: 0,
     };
     console.table(jobData);
 
     try {
       const { data } = await axios.post(
         `${import.meta.env.VITE_API_URL}/job`,
-        jobData,{withCredentials: true}
+        jobData,
+        { withCredentials: true }
       );
       console.log(data);
       toast.success("Job posted successfully.");
