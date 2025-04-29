@@ -4,8 +4,8 @@ const JobCard = ({ job }) => {
   const {
     _id,
     job_title,
-    company_name,
-    location,
+    buyer,
+    description,
     category,
     deadline,
     min_price,
@@ -28,14 +28,14 @@ const JobCard = ({ job }) => {
         {job_title}
       </h2>
 
-      {/* Company */}
+      {/* Buyer */}
       <p className="text-gray-600 group-hover:text-white mb-1 transition-all duration-300">
-        <span className="font-medium">Company:</span> {company_name || "N/A"}
+        <span className="font-medium">Buyer Email:</span> {buyer.email || "N/A"}
       </p>
 
-      {/* Location */}
-      <p className="text-gray-600 group-hover:text-white mb-1 transition-all duration-300">
-        <span className="font-medium">Location:</span> {location || "Remote"}
+      {/* description */}
+      <p title={description} className="text-gray-600 group-hover:text-white mb-1 transition-all duration-300">
+        <span className="font-medium">description:</span> {description.substring(0,10) }....
       </p>
 
       {/* Range */}
