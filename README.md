@@ -1,12 +1,59 @@
-# React + Vite
+# 🧑‍💻 Find Job
+A modern and responsive job search application built with React.js and Tailwind CSS Express and Mongo DB.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+🔗 [Live Website](https://findjob-22996.web.app)  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Server Side Git Hub Link
+🔗 [Server Side Github ](https://github.com/mehedi1437/find-job-server)  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📷 Screenshots
+![Homepage](https://ibb.co.com/Y4HBF5GL)
+![Job Listing](https://ibb.co.com/wFdZDwzN)
+
+---
+## Key Features 
+- JWT token Implemented for security
+- 🔍 Search for jobs by title 
+- 📋 Filter and sort job listings
+- 🖥️ Responsive design (Desktop, Tablet, Mobile)
+- include CRUD operations with mongoDB
+- 🔐 User authentication & profile management (Login And Sign UP)
+
+---
+
+## 📦 Features
+
+- here a user can posted a job for developer
+- Developer can bid on this JOB 
+- Buyer can accept or reject on developer's bids from bid requests section 
+- developer can see his all bids from my bids (click on profile icon to find my bids section) 
+- Here is a slider with auto sliding
+
+---
+
+## 🛠️ Built With
+- React.js
+- Tailwind CSS
+- React Router
+- Mongo DB
+- Express 
+- Meraki UI Daisy UI
+- Firebase (for hosting and Authentication)
+
+---
+
+## 📑 Installation
+
+Follow these steps to run the project locally:
+
+```bash
+git clone https://github.com/mehedi1437/find-job-client
+cd find-job-client
+npm install
+npm run dev
+
